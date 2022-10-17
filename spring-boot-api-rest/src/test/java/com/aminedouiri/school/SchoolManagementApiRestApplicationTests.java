@@ -1,0 +1,13 @@
+package com.aminedouiri.school;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SchoolManagementApiRestApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
