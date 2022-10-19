@@ -9,6 +9,8 @@ const UpdateStudent = () => {
         id: id,
         name: "",
         surname: "",
+        dateBirth: "",
+        classe: "",
         email: "",
         phone: ""
   });
@@ -73,6 +75,28 @@ const UpdateStudent = () => {
         </div>
         <div className="items-center justify-center h-14 w-full my-4">
           <label className="block text-gray-600 text-sm font-normal">
+            Date of Birth
+          </label>
+          <input
+            type="date"
+            name="dateBirth"
+            value={student.dateBirth}
+            onChange={(e) => handleChange(e)}
+            className="h-10 w-96 border mt-2 px-2 py-2"></input>
+        </div>
+        <div className="items-center justify-center h-14 w-full my-4">
+          <label className="block text-gray-600 text-sm font-normal">
+            Class Number
+          </label>
+          <input
+            type="number"
+            name="classe"
+            value={student.classe}
+            onChange={(e) => handleChange(e)}
+            className="h-10 w-96 border mt-2 px-2 py-2"></input>
+        </div>
+        <div className="items-center justify-center h-14 w-full my-4">
+          <label className="block text-gray-600 text-sm font-normal">
             Email
           </label>
           <input
@@ -87,7 +111,7 @@ const UpdateStudent = () => {
             Phone
           </label>
           <input
-            type="number"
+            type="phone"
             name="phone"
             value={student.phone}
             onChange={(e) => handleChange(e)}

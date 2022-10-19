@@ -5,6 +5,9 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
+import java.sql.Date;
+
 import javax.persistence.Column;
 
 
@@ -20,6 +23,12 @@ public class Student {
 	@Column(name = "student_surname")
 	private String surname;
 	
+	@Column(name = "student_date_birth")
+	private Date dateBirth;
+	
+	@Column(name = "student_classe")
+	private int classe;
+	
 	@Column(name = "student_email")
 	private String email;
 	
@@ -30,10 +39,12 @@ public class Student {
 		
 	}
 	
-	public Student(String name, String surname, String email, String phone) {
+	public Student(String name, String surname,Date dateBirth,int classe, String email, String phone) {
 		super();
 		this.name = name;
 		this.surname = surname;
+		this.dateBirth = dateBirth;
+		this.classe = classe;
 		this.email = email;
 		this.phone = phone;
 	}
@@ -75,6 +86,21 @@ public class Student {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	
+	public Date getDateBirth() {
+		return dateBirth;
+	}
+	
+	public void setDateBirth(Date dateBirth) {
+		this.dateBirth = dateBirth;
+	}
+	
+	public int getClasse() {
+		return classe;
+	}
+	public void setClasse(int classe) {
+		this.classe = classe;
 	}
 
 	

@@ -8,8 +8,10 @@ const AddStudent = () => {
         id:"",
         name: "",
         surname: "",
+        dateBirht: "",
+        classe: "",
         email: "",
-        ephone: ""
+        phone: ""
     });
     const handleChange = (e) =>{
         const value = e.target.value;
@@ -20,10 +22,13 @@ const AddStudent = () => {
     const reset = (e) => {
         e.preventDefault();
         setStudent({
-          name: "",
-          surname: "",
-          email: "",
-          phone: ""
+            id:"",
+            name: "",
+            surname: "",
+            dateBirht: "",
+            classe: "",
+            email: "",
+            phone: ""
         });
       };
     const saveStudent = (e) => {
@@ -72,9 +77,25 @@ const AddStudent = () => {
                     <label className="block text-gray-600 text-sm font-normal">
                         Phone
                     </label>
-                    <input type="string" 
+                    <input type="phone" 
                     className="h-10 w-96 border mt-2 px-2 py-2" name="phone"
                     value={student.phone} onChange={(e) => handleChange(e)}/>
+                </div>
+                <div className="items-center justify-content h-14 w-full my-4">
+                    <label className="block text-gray-600 text-sm font-normal">
+                        Date of Birth
+                    </label>
+                    <input type="date" 
+                    className="h-10 w-96 border mt-2 px-2 py-2" name="dateBirth"
+                    value={student.date} onChange={(e) => handleChange(e)}/>
+                </div>
+                <div className="items-center justify-content h-14 w-full my-4">
+                    <label className="block text-gray-600 text-sm font-normal">
+                        Class Number
+                    </label>
+                    <input type="number" 
+                    className="h-10 w-96 border mt-2 px-2 py-2" name="classe"
+                    value={student.classe} onChange={(e) => handleChange(e)}/>
                 </div>
                 <div className="items-center justify-content h-14 w-full my-4 space-x-4 pt-4">
                     <button className="rounded text-white font-semibold bg-green-500 hover:bg-green-700 py-2 px-6"

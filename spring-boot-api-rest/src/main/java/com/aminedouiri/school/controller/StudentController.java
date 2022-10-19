@@ -57,6 +57,8 @@ public class StudentController {
 			
 			student.setName(studentDetails.getName());
 			student.setSurname(studentDetails.getSurname());
+			student.setDateBirth(studentDetails.getDateBirth());
+			student.setClasse(studentDetails.getClasse());
 			student.setEmail(studentDetails.getEmail());
 			student.setPhone(studentDetails.getPhone());
 			
